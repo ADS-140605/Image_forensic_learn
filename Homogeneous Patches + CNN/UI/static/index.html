@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CameraForensics | Source Camera Identification</title>
+  <meta name="description"
+        content="Hierarchical AI-powered source camera model identification using deep learning forensic analysis." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+
+<!-- ── Animated background ─────────────────────────────────────────────────── -->
+<div class="bg-orbs" aria-hidden="true">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+</div>
+
+<!-- ── Header ──────────────────────────────────────────────────────────────── -->
+<header class="header">
+  <div class="header-inner">
+    <div class="logo">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+        <circle cx="14" cy="14" r="13" stroke="url(#lg1)" stroke-width="2"/>
+        <circle cx="14" cy="14" r="7"  fill="url(#lg2)" opacity="0.85"/>
+        <circle cx="14" cy="14" r="3"  fill="#fff"/>
+        <defs>
+          <linearGradient id="lg1" x1="0" y1="0" x2="28" y2="28" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#6366f1"/><stop offset="1" stop-color="#06b6d4"/>
+          </linearGradient>
+          <linearGradient id="lg2" x1="0" y1="7" x2="28" y2="21" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#6366f1"/><stop offset="1" stop-color="#06b6d4"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <span class="logo-text">Camera<span class="logo-accent">Forensics</span></span>
+    </div>
+    <div id="health-badge" class="badge badge--loading">Connecting…</div>
+  </div>
+</header>
+
+<!-- ── Main ────────────────────────────────────────────────────────────────── -->
+<main class="main">
+
+  <!-- ── Upload card ──────────────────────────────────────────────────────── -->
+  <section class="card upload-card" aria-label="Image upload">
+    <h1 class="card-title">Source Camera Identification</h1>
+    <p class="card-sub">Drop an image and the system will hierarchically identify the <em>brand</em> and <em>model</em> of the source camera using forensic patch analysis.</p>
+
+    <div id="drop-zone" class="drop-zone" role="button" tabindex="0"
+         aria-label="Drop image here or click to browse">
+      <div class="drop-icon" aria-hidden="true">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+          <path d="M8 36V12a4 4 0 014-4h24a4 4 0 014 4v24a4 4 0 01-4 4H12a4 4 0 01-4-4z"
+                stroke="url(#dg)" stroke-width="2" fill="none"/>
+          <circle cx="18" cy="20" r="4" stroke="url(#dg)" stroke-width="2"/>
+          <path d="M8 32l9-9 6 6 5-5 12 12" stroke="url(#dg)" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"/>
+          <defs>
+            <linearGradient id="dg" x1="8" y1="8" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#6366f1"/><stop offset="1" stop-color="#06b6d4"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <p class="drop-text">Drag &amp; drop image here</p>
+      <p class="drop-sub">or <span class="link">browse files</span></p>
+      <input id="file-input" type="file" accept="image/*" hidden aria-label="File input" />
+    </div>
+
+    <div id="preview-wrap" class="preview-wrap hidden" aria-live="polite">
+      <img id="preview-img" class="preview-img" src="" alt="Preview" />
+      <button id="clear-btn" class="btn btn--ghost" aria-label="Clear image">✕ Clear</button>
+    </div>
+
+    <button id="predict-btn" class="btn btn--primary" disabled aria-label="Analyse image">
+      <span class="btn-text">Analyse Image</span>
+      <span class="btn-spinner" aria-hidden="true"></span>
+    </button>
+  </section>
+
+  <!-- ── Results card ─────────────────────────────────────────────────────── -->
+  <section id="results-card" class="card results-card hidden" aria-live="polite" aria-label="Prediction results">
+    <h2 class="card-title">Forensic Analysis Results</h2>
+
+    <div class="result-grid">
+      <div class="result-block" id="brand-block">
+        <div class="result-label">Brand (Level 1)</div>
+        <div class="result-value" id="res-brand">—</div>
+        <div class="confidence-bar-wrap">
+          <div class="confidence-bar"><div class="confidence-fill" id="brand-conf-bar" style="width:0%"></div></div>
+          <span class="confidence-pct" id="brand-conf-pct">0%</span>
+        </div>
+      </div>
+
+      <div class="result-block" id="model-block">
+        <div class="result-label">Model (Level 2)</div>
+        <div class="result-value" id="res-model">—</div>
+        <div class="confidence-bar-wrap">
+          <div class="confidence-bar"><div class="confidence-fill" id="model-conf-bar" style="width:0%"></div></div>
+          <span class="confidence-pct" id="model-conf-pct">0%</span>
+        </div>
+      </div>
+
+      <div class="result-block stat-block">
+        <div class="result-label">Patches Analysed</div>
+        <div class="result-value mono" id="res-patches">—</div>
+      </div>
+    </div>
+
+    <!-- Vote distribution chart -->
+    <div class="vote-section">
+      <h3 class="section-title">Brand Vote Distribution</h3>
+      <div id="brand-votes-chart" class="vote-chart"></div>
+    </div>
+
+    <div class="vote-section" id="model-votes-section">
+      <h3 class="section-title">Model Vote Distribution</h3>
+      <div id="model-votes-chart" class="vote-chart"></div>
+    </div>
+  </section>
+
+  <!-- ── Training card ────────────────────────────────────────────────────── -->
+  <section class="card train-card" aria-label="Training control">
+    <h2 class="card-title">Training Control</h2>
+    <p class="card-sub">Start a background training job. Requires the Dresden Image Database at the configured path.</p>
+
+    <div class="train-form">
+      <div class="field-group">
+        <label class="field-label" for="train-level">Hierarchy Level</label>
+        <select id="train-level" class="select">
+          <option value="all">All (Brand + Model)</option>
+          <option value="brand">Brand only (Level 1)</option>
+          <option value="model">Model only (Level 2)</option>
+        </select>
+      </div>
+
+      <div class="field-group" id="brand-field" style="display:none">
+        <label class="field-label" for="train-brand">Brand Name</label>
+        <input id="train-brand" type="text" class="input" placeholder="e.g. Nikon" />
+      </div>
+
+      <div class="field-group">
+        <label class="field-label" for="train-epochs">Max Epochs</label>
+        <input id="train-epochs" type="number" class="input" value="100" min="1" max="500" />
+      </div>
+
+      <button id="train-btn" class="btn btn--secondary" aria-label="Start training">
+        Start Training
+      </button>
+    </div>
+
+    <!-- Status panel -->
+    <div id="train-status" class="train-status hidden" aria-live="polite">
+      <div class="status-header">
+        <span class="status-dot" id="status-dot"></span>
+        <span id="status-text" class="status-text">—</span>
+        <span id="job-id-badge" class="badge">—</span>
+      </div>
+      <pre id="train-log" class="train-log" aria-label="Training log"></pre>
+    </div>
+  </section>
+
+</main>
+
+<!-- ── Footer ──────────────────────────────────────────────────────────────── -->
+<footer class="footer">
+  <p>CameraForensics &bull; Hierarchical Source Camera Model Identification &bull; Dresden Image Database</p>
+</footer>
+
+<script src="/static/app.js"></script>
+</body>
+</html>

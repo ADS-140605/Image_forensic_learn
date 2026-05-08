@@ -1,0 +1,2483 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {
+    "hyperedges": [
+      {
+        "id": "hierarchical_classification_pipeline",
+        "label": "Hierarchical Classification Pipeline",
+        "nodes": [
+          "pipeline_py",
+          "trainer_py",
+          "convnet_py",
+          "distribution_py"
+        ],
+        "relation": "form",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "Homogeneous_Patches_CNN_v2/pipeline.py"
+      },
+      {
+        "id": "patch_processing_subsystem",
+        "label": "Patch Processing Subsystem",
+        "nodes": [
+          "patch_extractor_py",
+          "integral_image_py"
+        ],
+        "relation": "implement",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "Homogeneous_Patches_CNN_v2/AI/dataset/patch_extractor.py"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "label": "summarize_detect.py",
+      "file_type": "code",
+      "source_file": "summarize_detect.py",
+      "source_location": "L1",
+      "community": 13,
+      "norm_label": "summarize_detect.py",
+      "id": "summarize_detect_py"
+    },
+    {
+      "label": "pipeline.py",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/pipeline.py",
+      "source_location": "L1",
+      "community": 1,
+      "norm_label": "pipeline.py",
+      "id": "homogeneous_patches_cnn_v2_pipeline_py"
+    },
+    {
+      "label": "run_pipeline()",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/pipeline.py",
+      "source_location": "L15",
+      "community": 1,
+      "norm_label": "run_pipeline()",
+      "id": "homogeneous_patches_cnn_v2_pipeline_run_pipeline"
+    },
+    {
+      "label": "pipeline.py End-to-end training and evaluation pipeline.",
+      "file_type": "rationale",
+      "source_file": "Homogeneous_Patches_CNN_v2/pipeline.py",
+      "source_location": "L1",
+      "community": 1,
+      "norm_label": "pipeline.py end-to-end training and evaluation pipeline.",
+      "id": "homogeneous_patches_cnn_v2_pipeline_rationale_1"
+    },
+    {
+      "label": "config.py",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/config.py",
+      "source_location": "L1",
+      "community": 11,
+      "norm_label": "config.py",
+      "id": "homogeneous_patches_cnn_v2_ai_config_py"
+    },
+    {
+      "label": "config.py Configuration for the Camera Model Identification project.",
+      "file_type": "rationale",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/config.py",
+      "source_location": "L1",
+      "community": 11,
+      "norm_label": "config.py configuration for the camera model identification project.",
+      "id": "ai_config_rationale_1"
+    },
+    {
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/__init__.py",
+      "source_location": "L1",
+      "community": 14,
+      "norm_label": "__init__.py",
+      "id": "homogeneous_patches_cnn_v2_ai_init_py"
+    },
+    {
+      "label": "dresden.py",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/dataset/dresden.py",
+      "source_location": "L1",
+      "community": 1,
+      "norm_label": "dresden.py",
+      "id": "homogeneous_patches_cnn_v2_ai_dataset_dresden_py"
+    },
+    {
+      "label": "DresdenDataset",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/dataset/dresden.py",
+      "source_location": "L14",
+      "community": 1,
+      "norm_label": "dresdendataset",
+      "id": "dataset_dresden_dresdendataset"
+    },
+    {
+      "label": "Dataset",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "community": 1,
+      "norm_label": "dataset",
+      "id": "dataset"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/dataset/dresden.py",
+      "source_location": "L15",
+      "community": 1,
+      "norm_label": ".__init__()",
+      "id": "dataset_dresden_dresdendataset_init"
+    },
+    {
+      "label": ".__len__()",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/dataset/dresden.py",
+      "source_location": "L28",
+      "community": 1,
+      "norm_label": ".__len__()",
+      "id": "dataset_dresden_dresdendataset_len"
+    },
+    {
+      "label": ".__getitem__()",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/dataset/dresden.py",
+      "source_location": "L31",
+      "community": 1,
+      "norm_label": ".__getitem__()",
+      "id": "dataset_dresden_dresdendataset_getitem"
+    },
+    {
+      "label": "build_label_maps()",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/dataset/dresden.py",
+      "source_location": "L54",
+      "community": 1,
+      "norm_label": "build_label_maps()",
+      "id": "dataset_dresden_build_label_maps"
+    },
+    {
+      "label": "dresden.py Dresden dataset wrapper.",
+      "file_type": "rationale",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/dataset/dresden.py",
+      "source_location": "L1",
+      "community": 1,
+      "norm_label": "dresden.py dresden dataset wrapper.",
+      "id": "dataset_dresden_rationale_1"
+    },
+    {
+      "label": "patch_extractor.py",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/dataset/patch_extractor.py",
+      "source_location": "L1",
+      "community": 2,
+      "norm_label": "patch_extractor.py",
+      "id": "homogeneous_patches_cnn_v2_ai_dataset_patch_extractor_py"
+    },
+    {
+      "label": "PatchExtractor",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/dataset/patch_extractor.py",
+      "source_location": "L10",
+      "community": 2,
+      "norm_label": "patchextractor",
+      "id": "dataset_patch_extractor_patchextractor"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/dataset/patch_extractor.py",
+      "source_location": "L11",
+      "community": 2,
+      "norm_label": ".__init__()",
+      "id": "dataset_patch_extractor_patchextractor_init"
+    },
+    {
+      "label": ".extract()",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/dataset/patch_extractor.py",
+      "source_location": "L20",
+      "community": 2,
+      "norm_label": ".extract()",
+      "id": "dataset_patch_extractor_patchextractor_extract"
+    },
+    {
+      "label": "patch_extractor.py Logic for extracting and selecting homogeneous patches.",
+      "file_type": "rationale",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/dataset/patch_extractor.py",
+      "source_location": "L1",
+      "community": 2,
+      "norm_label": "patch_extractor.py logic for extracting and selecting homogeneous patches.",
+      "id": "dataset_patch_extractor_rationale_1"
+    },
+    {
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/dataset/__init__.py",
+      "source_location": "L1",
+      "community": 15,
+      "norm_label": "__init__.py",
+      "id": "homogeneous_patches_cnn_v2_ai_dataset_init_py"
+    },
+    {
+      "label": "predictor.py",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/inference/predictor.py",
+      "source_location": "L1",
+      "community": 2,
+      "norm_label": "predictor.py",
+      "id": "homogeneous_patches_cnn_v2_ai_inference_predictor_py"
+    },
+    {
+      "label": "CameraPredictor",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/inference/predictor.py",
+      "source_location": "L12",
+      "community": 2,
+      "norm_label": "camerapredictor",
+      "id": "inference_predictor_camerapredictor"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/inference/predictor.py",
+      "source_location": "L13",
+      "community": 2,
+      "norm_label": ".__init__()",
+      "id": "inference_predictor_camerapredictor_init"
+    },
+    {
+      "label": ".predict()",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/inference/predictor.py",
+      "source_location": "L46",
+      "community": 2,
+      "norm_label": ".predict()",
+      "id": "inference_predictor_camerapredictor_predict"
+    },
+    {
+      "label": "predictor.py Inference helper for hierarchical classification.",
+      "file_type": "rationale",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/inference/predictor.py",
+      "source_location": "L1",
+      "community": 2,
+      "norm_label": "predictor.py inference helper for hierarchical classification.",
+      "id": "inference_predictor_rationale_1"
+    },
+    {
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/inference/__init__.py",
+      "source_location": "L1",
+      "community": 16,
+      "norm_label": "__init__.py",
+      "id": "homogeneous_patches_cnn_v2_ai_inference_init_py"
+    },
+    {
+      "label": "convnet.py",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/models/convnet.py",
+      "source_location": "L1",
+      "community": 4,
+      "norm_label": "convnet.py",
+      "id": "homogeneous_patches_cnn_v2_ai_models_convnet_py"
+    },
+    {
+      "label": "CameraConvNet",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/models/convnet.py",
+      "source_location": "L22",
+      "community": 4,
+      "norm_label": "cameraconvnet",
+      "id": "models_convnet_cameraconvnet"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/models/convnet.py",
+      "source_location": "L23",
+      "community": 4,
+      "norm_label": ".__init__()",
+      "id": "models_convnet_cameraconvnet_init"
+    },
+    {
+      "label": ".forward()",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/models/convnet.py",
+      "source_location": "L76",
+      "community": 4,
+      "norm_label": ".forward()",
+      "id": "models_convnet_cameraconvnet_forward"
+    },
+    {
+      "label": "._initialize_weights()",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/models/convnet.py",
+      "source_location": "L85",
+      "community": 4,
+      "norm_label": "._initialize_weights()",
+      "id": "models_convnet_cameraconvnet_initialize_weights"
+    },
+    {
+      "label": "convnet.py Source Camera Identification ConvNet architecture from: \"Camera mod",
+      "file_type": "rationale",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/models/convnet.py",
+      "source_location": "L1",
+      "community": 4,
+      "norm_label": "convnet.py source camera identification convnet architecture from: \"camera mod",
+      "id": "models_convnet_rationale_1"
+    },
+    {
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/models/__init__.py",
+      "source_location": "L1",
+      "community": 17,
+      "norm_label": "__init__.py",
+      "id": "homogeneous_patches_cnn_v2_ai_models_init_py"
+    },
+    {
+      "label": "distribution.py",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/training/distribution.py",
+      "source_location": "L1",
+      "community": 1,
+      "norm_label": "distribution.py",
+      "id": "homogeneous_patches_cnn_v2_ai_training_distribution_py"
+    },
+    {
+      "label": "get_hierarchical_weights()",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/training/distribution.py",
+      "source_location": "L8",
+      "community": 1,
+      "norm_label": "get_hierarchical_weights()",
+      "id": "training_distribution_get_hierarchical_weights"
+    },
+    {
+      "label": "get_sampler()",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/training/distribution.py",
+      "source_location": "L36",
+      "community": 1,
+      "norm_label": "get_sampler()",
+      "id": "training_distribution_get_sampler"
+    },
+    {
+      "label": "distribution.py Hierarchical patch balancing weights.",
+      "file_type": "rationale",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/training/distribution.py",
+      "source_location": "L1",
+      "community": 1,
+      "norm_label": "distribution.py hierarchical patch balancing weights.",
+      "id": "training_distribution_rationale_1"
+    },
+    {
+      "label": "trainer.py",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/training/trainer.py",
+      "source_location": "L1",
+      "community": 6,
+      "norm_label": "trainer.py",
+      "id": "homogeneous_patches_cnn_v2_ai_training_trainer_py"
+    },
+    {
+      "label": "Trainer",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/training/trainer.py",
+      "source_location": "L12",
+      "community": 6,
+      "norm_label": "trainer",
+      "id": "training_trainer_trainer"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/training/trainer.py",
+      "source_location": "L13",
+      "community": 6,
+      "norm_label": ".__init__()",
+      "id": "training_trainer_trainer_init"
+    },
+    {
+      "label": ".train_epoch()",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/training/trainer.py",
+      "source_location": "L26",
+      "community": 6,
+      "norm_label": ".train_epoch()",
+      "id": "training_trainer_trainer_train_epoch"
+    },
+    {
+      "label": ".validate()",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/training/trainer.py",
+      "source_location": "L46",
+      "community": 6,
+      "norm_label": ".validate()",
+      "id": "training_trainer_trainer_validate"
+    },
+    {
+      "label": ".fit()",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/training/trainer.py",
+      "source_location": "L64",
+      "community": 6,
+      "norm_label": ".fit()",
+      "id": "training_trainer_trainer_fit"
+    },
+    {
+      "label": "trainer.py Shared training logic.",
+      "file_type": "rationale",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/training/trainer.py",
+      "source_location": "L1",
+      "community": 6,
+      "norm_label": "trainer.py shared training logic.",
+      "id": "training_trainer_rationale_1"
+    },
+    {
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/training/__init__.py",
+      "source_location": "L1",
+      "community": 18,
+      "norm_label": "__init__.py",
+      "id": "homogeneous_patches_cnn_v2_ai_training_init_py"
+    },
+    {
+      "label": "integral_image.py",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/utils/integral_image.py",
+      "source_location": "L1",
+      "community": 5,
+      "norm_label": "integral_image.py",
+      "id": "homogeneous_patches_cnn_v2_ai_utils_integral_image_py"
+    },
+    {
+      "label": "IntegralImage",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/utils/integral_image.py",
+      "source_location": "L7",
+      "community": 5,
+      "norm_label": "integralimage",
+      "id": "utils_integral_image_integralimage"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/utils/integral_image.py",
+      "source_location": "L8",
+      "community": 5,
+      "norm_label": ".__init__()",
+      "id": "utils_integral_image_integralimage_init"
+    },
+    {
+      "label": "._build()",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/utils/integral_image.py",
+      "source_location": "L16",
+      "community": 5,
+      "norm_label": "._build()",
+      "id": "utils_integral_image_integralimage_build"
+    },
+    {
+      "label": ".region_sum()",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/utils/integral_image.py",
+      "source_location": "L22",
+      "community": 5,
+      "norm_label": ".region_sum()",
+      "id": "utils_integral_image_integralimage_region_sum"
+    },
+    {
+      "label": ".region_sum_sq()",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/utils/integral_image.py",
+      "source_location": "L26",
+      "community": 5,
+      "norm_label": ".region_sum_sq()",
+      "id": "utils_integral_image_integralimage_region_sum_sq"
+    },
+    {
+      "label": ".region_std()",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/utils/integral_image.py",
+      "source_location": "L30",
+      "community": 5,
+      "norm_label": ".region_std()",
+      "id": "utils_integral_image_integralimage_region_std"
+    },
+    {
+      "label": "integral_image.py Efficient O(1) patch statistics using summed-area tables.",
+      "file_type": "rationale",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/utils/integral_image.py",
+      "source_location": "L1",
+      "community": 5,
+      "norm_label": "integral_image.py efficient o(1) patch statistics using summed-area tables.",
+      "id": "utils_integral_image_rationale_1"
+    },
+    {
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/utils/__init__.py",
+      "source_location": "L1",
+      "community": 19,
+      "norm_label": "__init__.py",
+      "id": "homogeneous_patches_cnn_v2_ai_utils_init_py"
+    },
+    {
+      "label": "test_architecture.py",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/tests/test_architecture.py",
+      "source_location": "L1",
+      "community": 4,
+      "norm_label": "test_architecture.py",
+      "id": "homogeneous_patches_cnn_v2_tests_test_architecture_py"
+    },
+    {
+      "label": "test_convnet_architecture()",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/tests/test_architecture.py",
+      "source_location": "L4",
+      "community": 4,
+      "norm_label": "test_convnet_architecture()",
+      "id": "tests_test_architecture_test_convnet_architecture"
+    },
+    {
+      "label": "main.py",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/main.py",
+      "source_location": "L1",
+      "community": 9,
+      "norm_label": "main.py",
+      "id": "homogeneous_patches_cnn_v2_ui_main_py"
+    },
+    {
+      "label": "read_index()",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/main.py",
+      "source_location": "L41",
+      "community": 9,
+      "norm_label": "read_index()",
+      "id": "ui_main_read_index"
+    },
+    {
+      "label": "predict_image()",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/main.py",
+      "source_location": "L46",
+      "community": 9,
+      "norm_label": "predict_image()",
+      "id": "ui_main_predict_image"
+    },
+    {
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/__init__.py",
+      "source_location": "L1",
+      "community": 20,
+      "norm_label": "__init__.py",
+      "id": "homogeneous_patches_cnn_v2_ui_init_py"
+    },
+    {
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/routers/__init__.py",
+      "source_location": "L1",
+      "community": 21,
+      "norm_label": "__init__.py",
+      "id": "homogeneous_patches_cnn_v2_ui_routers_init_py"
+    },
+    {
+      "label": "app.js",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L1",
+      "community": 0,
+      "norm_label": "app.js",
+      "id": "homogeneous_patches_cnn_v2_ui_static_app_js"
+    },
+    {
+      "label": "dropZone",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L10",
+      "community": 0,
+      "norm_label": "dropzone",
+      "id": "static_app_dropzone"
+    },
+    {
+      "label": "fileInput",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L11",
+      "community": 0,
+      "norm_label": "fileinput",
+      "id": "static_app_fileinput"
+    },
+    {
+      "label": "previewWrap",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L12",
+      "community": 0,
+      "norm_label": "previewwrap",
+      "id": "static_app_previewwrap"
+    },
+    {
+      "label": "previewImg",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L13",
+      "community": 0,
+      "norm_label": "previewimg",
+      "id": "static_app_previewimg"
+    },
+    {
+      "label": "clearBtn",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L14",
+      "community": 0,
+      "norm_label": "clearbtn",
+      "id": "static_app_clearbtn"
+    },
+    {
+      "label": "predictBtn",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L15",
+      "community": 0,
+      "norm_label": "predictbtn",
+      "id": "static_app_predictbtn"
+    },
+    {
+      "label": "resultsCard",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L16",
+      "community": 0,
+      "norm_label": "resultscard",
+      "id": "static_app_resultscard"
+    },
+    {
+      "label": "healthBadge",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L17",
+      "community": 0,
+      "norm_label": "healthbadge",
+      "id": "static_app_healthbadge"
+    },
+    {
+      "label": "resBrand",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L20",
+      "community": 0,
+      "norm_label": "resbrand",
+      "id": "static_app_resbrand"
+    },
+    {
+      "label": "resModel",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L21",
+      "community": 0,
+      "norm_label": "resmodel",
+      "id": "static_app_resmodel"
+    },
+    {
+      "label": "resPatches",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L22",
+      "community": 0,
+      "norm_label": "respatches",
+      "id": "static_app_respatches"
+    },
+    {
+      "label": "brandConfBar",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L23",
+      "community": 0,
+      "norm_label": "brandconfbar",
+      "id": "static_app_brandconfbar"
+    },
+    {
+      "label": "brandConfPct",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L24",
+      "community": 0,
+      "norm_label": "brandconfpct",
+      "id": "static_app_brandconfpct"
+    },
+    {
+      "label": "modelConfBar",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L25",
+      "community": 0,
+      "norm_label": "modelconfbar",
+      "id": "static_app_modelconfbar"
+    },
+    {
+      "label": "modelConfPct",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L26",
+      "community": 0,
+      "norm_label": "modelconfpct",
+      "id": "static_app_modelconfpct"
+    },
+    {
+      "label": "brandVoteChart",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L27",
+      "community": 0,
+      "norm_label": "brandvotechart",
+      "id": "static_app_brandvotechart"
+    },
+    {
+      "label": "modelVoteChart",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L28",
+      "community": 0,
+      "norm_label": "modelvotechart",
+      "id": "static_app_modelvotechart"
+    },
+    {
+      "label": "modelVoteSec",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L29",
+      "community": 0,
+      "norm_label": "modelvotesec",
+      "id": "static_app_modelvotesec"
+    },
+    {
+      "label": "trainLevel",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L32",
+      "community": 0,
+      "norm_label": "trainlevel",
+      "id": "static_app_trainlevel"
+    },
+    {
+      "label": "brandField",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L33",
+      "community": 0,
+      "norm_label": "brandfield",
+      "id": "static_app_brandfield"
+    },
+    {
+      "label": "trainBrand",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L34",
+      "community": 0,
+      "norm_label": "trainbrand",
+      "id": "static_app_trainbrand"
+    },
+    {
+      "label": "trainEpochs",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L35",
+      "community": 0,
+      "norm_label": "trainepochs",
+      "id": "static_app_trainepochs"
+    },
+    {
+      "label": "trainBtn",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L36",
+      "community": 0,
+      "norm_label": "trainbtn",
+      "id": "static_app_trainbtn"
+    },
+    {
+      "label": "trainStatusEl",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L37",
+      "community": 0,
+      "norm_label": "trainstatusel",
+      "id": "static_app_trainstatusel"
+    },
+    {
+      "label": "statusDot",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L38",
+      "community": 0,
+      "norm_label": "statusdot",
+      "id": "static_app_statusdot"
+    },
+    {
+      "label": "statusText",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L39",
+      "community": 0,
+      "norm_label": "statustext",
+      "id": "static_app_statustext"
+    },
+    {
+      "label": "jobIdBadge",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L40",
+      "community": 0,
+      "norm_label": "jobidbadge",
+      "id": "static_app_jobidbadge"
+    },
+    {
+      "label": "trainLog",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L41",
+      "community": 0,
+      "norm_label": "trainlog",
+      "id": "static_app_trainlog"
+    },
+    {
+      "label": "checkHealth()",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L51",
+      "community": 3,
+      "norm_label": "checkhealth()",
+      "id": "static_app_checkhealth"
+    },
+    {
+      "label": "setFile()",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L97",
+      "community": 3,
+      "norm_label": "setfile()",
+      "id": "static_app_setfile"
+    },
+    {
+      "label": "clearFile()",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L111",
+      "community": 0,
+      "norm_label": "clearfile()",
+      "id": "static_app_clearfile"
+    },
+    {
+      "label": "runPrediction()",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L126",
+      "community": 3,
+      "norm_label": "runprediction()",
+      "id": "static_app_runprediction"
+    },
+    {
+      "label": "renderResults()",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L150",
+      "community": 12,
+      "norm_label": "renderresults()",
+      "id": "static_app_renderresults"
+    },
+    {
+      "label": "renderVoteChart()",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L180",
+      "community": 12,
+      "norm_label": "rendervotechart()",
+      "id": "static_app_rendervotechart"
+    },
+    {
+      "label": "startTraining()",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L222",
+      "community": 3,
+      "norm_label": "starttraining()",
+      "id": "static_app_starttraining"
+    },
+    {
+      "label": "startPolling()",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L256",
+      "community": 3,
+      "norm_label": "startpolling()",
+      "id": "static_app_startpolling"
+    },
+    {
+      "label": "pollStatus()",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L261",
+      "community": 3,
+      "norm_label": "pollstatus()",
+      "id": "static_app_pollstatus"
+    },
+    {
+      "label": "updateStatusUI()",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L287",
+      "community": 3,
+      "norm_label": "updatestatusui()",
+      "id": "static_app_updatestatusui"
+    },
+    {
+      "label": "setLoading()",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L295",
+      "community": 3,
+      "norm_label": "setloading()",
+      "id": "static_app_setloading"
+    },
+    {
+      "label": "showToast()",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L300",
+      "community": 3,
+      "norm_label": "showtoast()",
+      "id": "static_app_showtoast"
+    },
+    {
+      "label": "pipeline.py",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/pipeline.py",
+      "source_location": null,
+      "community": 7,
+      "norm_label": "pipeline.py",
+      "id": "pipeline_py"
+    },
+    {
+      "label": "config.py",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/config.py",
+      "source_location": null,
+      "community": 7,
+      "norm_label": "config.py",
+      "id": "config_py"
+    },
+    {
+      "label": "dresden.py",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/dataset/dresden.py",
+      "source_location": null,
+      "community": 7,
+      "norm_label": "dresden.py",
+      "id": "dresden_py"
+    },
+    {
+      "label": "patch_extractor.py",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/dataset/patch_extractor.py",
+      "source_location": null,
+      "community": 22,
+      "norm_label": "patch_extractor.py",
+      "id": "patch_extractor_py"
+    },
+    {
+      "label": "predictor.py",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/inference/predictor.py",
+      "source_location": null,
+      "community": 10,
+      "norm_label": "predictor.py",
+      "id": "predictor_py"
+    },
+    {
+      "label": "convnet.py",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/models/convnet.py",
+      "source_location": null,
+      "community": 7,
+      "norm_label": "convnet.py",
+      "id": "convnet_py"
+    },
+    {
+      "label": "distribution.py",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/training/distribution.py",
+      "source_location": null,
+      "community": 7,
+      "norm_label": "distribution.py",
+      "id": "distribution_py"
+    },
+    {
+      "label": "trainer.py",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/training/trainer.py",
+      "source_location": null,
+      "community": 7,
+      "norm_label": "trainer.py",
+      "id": "trainer_py"
+    },
+    {
+      "label": "integral_image.py",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/utils/integral_image.py",
+      "source_location": null,
+      "community": 23,
+      "norm_label": "integral_image.py",
+      "id": "integral_image_py"
+    },
+    {
+      "label": "test_architecture.py",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/tests/test_architecture.py",
+      "source_location": null,
+      "community": 8,
+      "norm_label": "test_architecture.py",
+      "id": "test_architecture_py"
+    },
+    {
+      "label": "main.py",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/main.py",
+      "source_location": null,
+      "community": 10,
+      "norm_label": "main.py",
+      "id": "ui_main_py"
+    },
+    {
+      "label": "app.js",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": null,
+      "community": 10,
+      "norm_label": "app.js",
+      "id": "app_js"
+    },
+    {
+      "label": "2022 ESWA Paper",
+      "file_type": "paper",
+      "source_file": "2022 ESWA Camera model identification based on forensic traces extracted from homogeneous patches.md",
+      "source_location": null,
+      "community": 7,
+      "norm_label": "2022 eswa paper",
+      "id": "paper_md"
+    },
+    {
+      "label": "Root README",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": null,
+      "community": 24,
+      "norm_label": "root readme",
+      "id": "readme_root"
+    },
+    {
+      "label": "Project README",
+      "file_type": "document",
+      "source_file": "Homogeneous_Patches_CNN_v2/README.md",
+      "source_location": null,
+      "community": 25,
+      "norm_label": "project readme",
+      "id": "readme_v2"
+    },
+    {
+      "label": "GEMINI Instructions",
+      "file_type": "document",
+      "source_file": "GEMINI.md",
+      "source_location": null,
+      "community": 26,
+      "norm_label": "gemini instructions",
+      "id": "gemini_md"
+    },
+    {
+      "label": "DresdenDataset",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/dataset/dresden.py",
+      "source_location": 14,
+      "community": 8,
+      "norm_label": "dresdendataset",
+      "id": "dresden_dataset_class"
+    },
+    {
+      "label": "PatchExtractor",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/dataset/patch_extractor.py",
+      "source_location": 8,
+      "community": 8,
+      "norm_label": "patchextractor",
+      "id": "patch_extractor_class"
+    },
+    {
+      "label": "CameraConvNet",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/models/convnet.py",
+      "source_location": 23,
+      "community": 8,
+      "norm_label": "cameraconvnet",
+      "id": "camera_convnet_class"
+    },
+    {
+      "label": "Trainer",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/training/trainer.py",
+      "source_location": 12,
+      "community": 8,
+      "norm_label": "trainer",
+      "id": "trainer_class"
+    },
+    {
+      "label": "CameraPredictor",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/inference/predictor.py",
+      "source_location": 10,
+      "community": 8,
+      "norm_label": "camerapredictor",
+      "id": "camera_predictor_class"
+    },
+    {
+      "label": "IntegralImage",
+      "file_type": "code",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/utils/integral_image.py",
+      "source_location": 6,
+      "community": 8,
+      "norm_label": "integralimage",
+      "id": "integral_image_class"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/pipeline.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_pipeline_py",
+      "target": "homogeneous_patches_cnn_v2_pipeline_run_pipeline"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/pipeline.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_pipeline_rationale_1",
+      "target": "homogeneous_patches_cnn_v2_pipeline_py"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "Homogeneous_Patches_CNN_v2/pipeline.py",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "homogeneous_patches_cnn_v2_pipeline_run_pipeline",
+      "target": "dataset_dresden_build_label_maps"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "Homogeneous_Patches_CNN_v2/pipeline.py",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "homogeneous_patches_cnn_v2_pipeline_run_pipeline",
+      "target": "dataset_dresden_dresdendataset"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "Homogeneous_Patches_CNN_v2/pipeline.py",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "homogeneous_patches_cnn_v2_pipeline_run_pipeline",
+      "target": "training_distribution_get_sampler"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "Homogeneous_Patches_CNN_v2/pipeline.py",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "homogeneous_patches_cnn_v2_pipeline_run_pipeline",
+      "target": "models_convnet_cameraconvnet"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "Homogeneous_Patches_CNN_v2/pipeline.py",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "homogeneous_patches_cnn_v2_pipeline_run_pipeline",
+      "target": "training_trainer_trainer"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/config.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "ai_config_rationale_1",
+      "target": "homogeneous_patches_cnn_v2_ai_config_py"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/dataset/dresden.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ai_dataset_dresden_py",
+      "target": "dataset_dresden_dresdendataset"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/dataset/dresden.py",
+      "source_location": "L54",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ai_dataset_dresden_py",
+      "target": "dataset_dresden_build_label_maps"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/dataset/dresden.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dataset_dresden_rationale_1",
+      "target": "homogeneous_patches_cnn_v2_ai_dataset_dresden_py"
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/dataset/dresden.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dataset_dresden_dresdendataset",
+      "target": "dataset"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/dataset/dresden.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dataset_dresden_dresdendataset",
+      "target": "dataset_dresden_dresdendataset_init"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/dataset/dresden.py",
+      "source_location": "L28",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dataset_dresden_dresdendataset",
+      "target": "dataset_dresden_dresdendataset_len"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/dataset/dresden.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dataset_dresden_dresdendataset",
+      "target": "dataset_dresden_dresdendataset_getitem"
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/dataset/dresden.py",
+      "source_location": "L12",
+      "weight": 0.8,
+      "confidence_score": 0.5,
+      "source": "dataset_dresden_dresdendataset",
+      "target": "dataset_patch_extractor_patchextractor"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/dataset/dresden.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "dataset_dresden_dresdendataset_init",
+      "target": "dataset_patch_extractor_patchextractor"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/dataset/patch_extractor.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ai_dataset_patch_extractor_py",
+      "target": "dataset_patch_extractor_patchextractor"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/dataset/patch_extractor.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dataset_patch_extractor_rationale_1",
+      "target": "homogeneous_patches_cnn_v2_ai_dataset_patch_extractor_py"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/dataset/patch_extractor.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dataset_patch_extractor_patchextractor",
+      "target": "dataset_patch_extractor_patchextractor_init"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/dataset/patch_extractor.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dataset_patch_extractor_patchextractor",
+      "target": "dataset_patch_extractor_patchextractor_extract"
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/dataset/patch_extractor.py",
+      "source_location": "L7",
+      "weight": 0.8,
+      "confidence_score": 0.5,
+      "source": "dataset_patch_extractor_patchextractor",
+      "target": "utils_integral_image_integralimage"
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/inference/predictor.py",
+      "source_location": "L10",
+      "weight": 0.8,
+      "confidence_score": 0.5,
+      "source": "inference_predictor_camerapredictor",
+      "target": "dataset_patch_extractor_patchextractor"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/inference/predictor.py",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "inference_predictor_camerapredictor_init",
+      "target": "dataset_patch_extractor_patchextractor"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/dataset/patch_extractor.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "dataset_patch_extractor_patchextractor_extract",
+      "target": "utils_integral_image_integralimage"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/inference/predictor.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ai_inference_predictor_py",
+      "target": "inference_predictor_camerapredictor"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/inference/predictor.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "inference_predictor_rationale_1",
+      "target": "homogeneous_patches_cnn_v2_ai_inference_predictor_py"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/inference/predictor.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "inference_predictor_camerapredictor",
+      "target": "inference_predictor_camerapredictor_init"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/inference/predictor.py",
+      "source_location": "L46",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "inference_predictor_camerapredictor",
+      "target": "inference_predictor_camerapredictor_predict"
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/inference/predictor.py",
+      "source_location": "L9",
+      "weight": 0.8,
+      "confidence_score": 0.5,
+      "source": "inference_predictor_camerapredictor",
+      "target": "models_convnet_cameraconvnet"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/inference/predictor.py",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "inference_predictor_camerapredictor_init",
+      "target": "models_convnet_cameraconvnet"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/models/convnet.py",
+      "source_location": "L22",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ai_models_convnet_py",
+      "target": "models_convnet_cameraconvnet"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/models/convnet.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "models_convnet_rationale_1",
+      "target": "homogeneous_patches_cnn_v2_ai_models_convnet_py"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/models/convnet.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "models_convnet_cameraconvnet",
+      "target": "models_convnet_cameraconvnet_init"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/models/convnet.py",
+      "source_location": "L76",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "models_convnet_cameraconvnet",
+      "target": "models_convnet_cameraconvnet_forward"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/models/convnet.py",
+      "source_location": "L85",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "models_convnet_cameraconvnet",
+      "target": "models_convnet_cameraconvnet_initialize_weights"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "Homogeneous_Patches_CNN_v2/tests/test_architecture.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "tests_test_architecture_test_convnet_architecture",
+      "target": "models_convnet_cameraconvnet"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/models/convnet.py",
+      "source_location": "L74",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "models_convnet_cameraconvnet_init",
+      "target": "models_convnet_cameraconvnet_initialize_weights"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/training/distribution.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ai_training_distribution_py",
+      "target": "training_distribution_get_hierarchical_weights"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/training/distribution.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ai_training_distribution_py",
+      "target": "training_distribution_get_sampler"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/training/distribution.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "training_distribution_rationale_1",
+      "target": "homogeneous_patches_cnn_v2_ai_training_distribution_py"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/training/distribution.py",
+      "source_location": "L37",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "training_distribution_get_sampler",
+      "target": "training_distribution_get_hierarchical_weights"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/training/trainer.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ai_training_trainer_py",
+      "target": "training_trainer_trainer"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/training/trainer.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "training_trainer_rationale_1",
+      "target": "homogeneous_patches_cnn_v2_ai_training_trainer_py"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/training/trainer.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "training_trainer_trainer",
+      "target": "training_trainer_trainer_init"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/training/trainer.py",
+      "source_location": "L26",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "training_trainer_trainer",
+      "target": "training_trainer_trainer_train_epoch"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/training/trainer.py",
+      "source_location": "L46",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "training_trainer_trainer",
+      "target": "training_trainer_trainer_validate"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/training/trainer.py",
+      "source_location": "L64",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "training_trainer_trainer",
+      "target": "training_trainer_trainer_fit"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/training/trainer.py",
+      "source_location": "L67",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "training_trainer_trainer_fit",
+      "target": "training_trainer_trainer_train_epoch"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/training/trainer.py",
+      "source_location": "L68",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "training_trainer_trainer_fit",
+      "target": "training_trainer_trainer_validate"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/utils/integral_image.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ai_utils_integral_image_py",
+      "target": "utils_integral_image_integralimage"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/utils/integral_image.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "utils_integral_image_rationale_1",
+      "target": "homogeneous_patches_cnn_v2_ai_utils_integral_image_py"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/utils/integral_image.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "utils_integral_image_integralimage",
+      "target": "utils_integral_image_integralimage_init"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/utils/integral_image.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "utils_integral_image_integralimage",
+      "target": "utils_integral_image_integralimage_build"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/utils/integral_image.py",
+      "source_location": "L22",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "utils_integral_image_integralimage",
+      "target": "utils_integral_image_integralimage_region_sum"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/utils/integral_image.py",
+      "source_location": "L26",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "utils_integral_image_integralimage",
+      "target": "utils_integral_image_integralimage_region_sum_sq"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/utils/integral_image.py",
+      "source_location": "L30",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "utils_integral_image_integralimage",
+      "target": "utils_integral_image_integralimage_region_std"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/utils/integral_image.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "utils_integral_image_integralimage_init",
+      "target": "utils_integral_image_integralimage_build"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/utils/integral_image.py",
+      "source_location": "L32",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "utils_integral_image_integralimage_region_std",
+      "target": "utils_integral_image_integralimage_region_sum"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/utils/integral_image.py",
+      "source_location": "L33",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "utils_integral_image_integralimage_region_std",
+      "target": "utils_integral_image_integralimage_region_sum_sq"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/tests/test_architecture.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_tests_test_architecture_py",
+      "target": "tests_test_architecture_test_convnet_architecture"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/main.py",
+      "source_location": "L41",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ui_main_py",
+      "target": "ui_main_read_index"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/main.py",
+      "source_location": "L46",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ui_main_py",
+      "target": "ui_main_predict_image"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ui_static_app_js",
+      "target": "static_app_dropzone"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ui_static_app_js",
+      "target": "static_app_fileinput"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ui_static_app_js",
+      "target": "static_app_previewwrap"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ui_static_app_js",
+      "target": "static_app_previewimg"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ui_static_app_js",
+      "target": "static_app_clearbtn"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ui_static_app_js",
+      "target": "static_app_predictbtn"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ui_static_app_js",
+      "target": "static_app_resultscard"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ui_static_app_js",
+      "target": "static_app_healthbadge"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ui_static_app_js",
+      "target": "static_app_resbrand"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ui_static_app_js",
+      "target": "static_app_resmodel"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L22",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ui_static_app_js",
+      "target": "static_app_respatches"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L23",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ui_static_app_js",
+      "target": "static_app_brandconfbar"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L24",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ui_static_app_js",
+      "target": "static_app_brandconfpct"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ui_static_app_js",
+      "target": "static_app_modelconfbar"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L26",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ui_static_app_js",
+      "target": "static_app_modelconfpct"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L27",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ui_static_app_js",
+      "target": "static_app_brandvotechart"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L28",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ui_static_app_js",
+      "target": "static_app_modelvotechart"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L29",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ui_static_app_js",
+      "target": "static_app_modelvotesec"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L32",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ui_static_app_js",
+      "target": "static_app_trainlevel"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L33",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ui_static_app_js",
+      "target": "static_app_brandfield"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L34",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ui_static_app_js",
+      "target": "static_app_trainbrand"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L35",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ui_static_app_js",
+      "target": "static_app_trainepochs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L36",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ui_static_app_js",
+      "target": "static_app_trainbtn"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L37",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ui_static_app_js",
+      "target": "static_app_trainstatusel"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L38",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ui_static_app_js",
+      "target": "static_app_statusdot"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L39",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ui_static_app_js",
+      "target": "static_app_statustext"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L40",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ui_static_app_js",
+      "target": "static_app_jobidbadge"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L41",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ui_static_app_js",
+      "target": "static_app_trainlog"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L51",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ui_static_app_js",
+      "target": "static_app_checkhealth"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L97",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ui_static_app_js",
+      "target": "static_app_setfile"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L111",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ui_static_app_js",
+      "target": "static_app_clearfile"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L126",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ui_static_app_js",
+      "target": "static_app_runprediction"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L150",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ui_static_app_js",
+      "target": "static_app_renderresults"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L180",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ui_static_app_js",
+      "target": "static_app_rendervotechart"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L222",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ui_static_app_js",
+      "target": "static_app_starttraining"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L256",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ui_static_app_js",
+      "target": "static_app_startpolling"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L261",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ui_static_app_js",
+      "target": "static_app_pollstatus"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L287",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ui_static_app_js",
+      "target": "static_app_updatestatusui"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L295",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ui_static_app_js",
+      "target": "static_app_setloading"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L300",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "homogeneous_patches_cnn_v2_ui_static_app_js",
+      "target": "static_app_showtoast"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L277",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "static_app_pollstatus",
+      "target": "static_app_checkhealth"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L99",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "static_app_setfile",
+      "target": "static_app_showtoast"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L129",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "static_app_runprediction",
+      "target": "static_app_setloading"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L142",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "static_app_runprediction",
+      "target": "static_app_renderresults"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L144",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "static_app_runprediction",
+      "target": "static_app_showtoast"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L167",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "static_app_renderresults",
+      "target": "static_app_rendervotechart"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L228",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "static_app_starttraining",
+      "target": "static_app_showtoast"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L232",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "static_app_starttraining",
+      "target": "static_app_setloading"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L247",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "static_app_starttraining",
+      "target": "static_app_updatestatusui"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L248",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "static_app_starttraining",
+      "target": "static_app_startpolling"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L274",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "static_app_pollstatus",
+      "target": "static_app_updatestatusui"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source_location": "L275",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "static_app_pollstatus",
+      "target": "static_app_setloading"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Homogeneous_Patches_CNN_v2/pipeline.py",
+      "source": "pipeline_py",
+      "target": "config_py"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Homogeneous_Patches_CNN_v2/pipeline.py",
+      "source": "pipeline_py",
+      "target": "dresden_py"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Homogeneous_Patches_CNN_v2/pipeline.py",
+      "source": "pipeline_py",
+      "target": "distribution_py"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Homogeneous_Patches_CNN_v2/pipeline.py",
+      "source": "pipeline_py",
+      "target": "trainer_py"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Homogeneous_Patches_CNN_v2/pipeline.py",
+      "source": "pipeline_py",
+      "target": "convnet_py"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/main.py",
+      "source": "ui_main_py",
+      "target": "predictor_py"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/models/convnet.py",
+      "source": "convnet_py",
+      "target": "paper_md"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Homogeneous_Patches_CNN_v2/tests/test_architecture.py",
+      "source": "test_architecture_py",
+      "target": "camera_convnet_class"
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "Homogeneous_Patches_CNN_v2/UI/static/app.js",
+      "source": "app_js",
+      "target": "ui_main_py"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/dataset/dresden.py",
+      "source": "dresden_dataset_class",
+      "target": "patch_extractor_class"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/dataset/patch_extractor.py",
+      "source": "patch_extractor_class",
+      "target": "integral_image_class"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/inference/predictor.py",
+      "source": "camera_predictor_class",
+      "target": "patch_extractor_class"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/inference/predictor.py",
+      "source": "camera_predictor_class",
+      "target": "camera_convnet_class"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/training/trainer.py",
+      "source": "trainer_class",
+      "target": "camera_convnet_class"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "hierarchical_classification_pipeline",
+      "label": "Hierarchical Classification Pipeline",
+      "nodes": [
+        "pipeline_py",
+        "trainer_py",
+        "convnet_py",
+        "distribution_py"
+      ],
+      "relation": "form",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Homogeneous_Patches_CNN_v2/pipeline.py"
+    },
+    {
+      "id": "patch_processing_subsystem",
+      "label": "Patch Processing Subsystem",
+      "nodes": [
+        "patch_extractor_py",
+        "integral_image_py"
+      ],
+      "relation": "implement",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Homogeneous_Patches_CNN_v2/AI/dataset/patch_extractor.py"
+    }
+  ],
+  "built_at_commit": "f28c5e107f44678735f3adffcfcf23887543c81e"
+}

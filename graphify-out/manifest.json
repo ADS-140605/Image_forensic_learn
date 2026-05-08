@@ -1,0 +1,110 @@
+{
+  "D:\\Image_Forensic\\finalize_graph.py": {
+    "mtime": 1778268357.233743,
+    "hash": "c6b8bc108a4389a24d41f9d3664d1031"
+  },
+  "D:\\Image_Forensic\\Homogeneous_Patches_CNN_v2\\pipeline.py": {
+    "mtime": 1778259789.0444627,
+    "hash": "e8d2a61606b331914c854325002dbd0f"
+  },
+  "D:\\Image_Forensic\\Homogeneous_Patches_CNN_v2\\AI\\config.py": {
+    "mtime": 1778259716.364922,
+    "hash": "960078efb58e44b7043fb943e0db7ba5"
+  },
+  "D:\\Image_Forensic\\Homogeneous_Patches_CNN_v2\\AI\\__init__.py": {
+    "mtime": 1778261734.9184132,
+    "hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "D:\\Image_Forensic\\Homogeneous_Patches_CNN_v2\\AI\\dataset\\dresden.py": {
+    "mtime": 1778259745.0449536,
+    "hash": "906675437bec4a1efa88a26986b25aae"
+  },
+  "D:\\Image_Forensic\\Homogeneous_Patches_CNN_v2\\AI\\dataset\\patch_extractor.py": {
+    "mtime": 1778259734.8921542,
+    "hash": "0f9fed5014fda8ac0efc9f93bd98eab8"
+  },
+  "D:\\Image_Forensic\\Homogeneous_Patches_CNN_v2\\AI\\dataset\\__init__.py": {
+    "mtime": 1778261735.008238,
+    "hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "D:\\Image_Forensic\\Homogeneous_Patches_CNN_v2\\AI\\inference\\predictor.py": {
+    "mtime": 1778259778.268187,
+    "hash": "142bc9159cfa3a76efb8c42eb847ac9d"
+  },
+  "D:\\Image_Forensic\\Homogeneous_Patches_CNN_v2\\AI\\inference\\__init__.py": {
+    "mtime": 1778261735.0338626,
+    "hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "D:\\Image_Forensic\\Homogeneous_Patches_CNN_v2\\AI\\models\\convnet.py": {
+    "mtime": 1778259706.9873793,
+    "hash": "8cd90a6aababafe36a0ba272f2e8b3f2"
+  },
+  "D:\\Image_Forensic\\Homogeneous_Patches_CNN_v2\\AI\\models\\__init__.py": {
+    "mtime": 1778261734.9992378,
+    "hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "D:\\Image_Forensic\\Homogeneous_Patches_CNN_v2\\AI\\training\\distribution.py": {
+    "mtime": 1778259767.7070842,
+    "hash": "317b7889515b7c0b25c67e0e441416b7"
+  },
+  "D:\\Image_Forensic\\Homogeneous_Patches_CNN_v2\\AI\\training\\trainer.py": {
+    "mtime": 1778259755.1115437,
+    "hash": "46a29b427d2695ad293d60ada8ec3f09"
+  },
+  "D:\\Image_Forensic\\Homogeneous_Patches_CNN_v2\\AI\\training\\__init__.py": {
+    "mtime": 1778261735.0162463,
+    "hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "D:\\Image_Forensic\\Homogeneous_Patches_CNN_v2\\AI\\utils\\integral_image.py": {
+    "mtime": 1778259725.0517218,
+    "hash": "4cde24372385c0339154806324f00f56"
+  },
+  "D:\\Image_Forensic\\Homogeneous_Patches_CNN_v2\\AI\\utils\\__init__.py": {
+    "mtime": 1778261735.0254567,
+    "hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "D:\\Image_Forensic\\Homogeneous_Patches_CNN_v2\\tests\\test_architecture.py": {
+    "mtime": 1778259797.3204527,
+    "hash": "b38a3c6c5fa87a82fbb351c723b296ee"
+  },
+  "D:\\Image_Forensic\\Homogeneous_Patches_CNN_v2\\UI\\main.py": {
+    "mtime": 1778260759.6927235,
+    "hash": "815a95a1cb31f5a4806805f07e75c950"
+  },
+  "D:\\Image_Forensic\\Homogeneous_Patches_CNN_v2\\UI\\__init__.py": {
+    "mtime": 1778261735.0422742,
+    "hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "D:\\Image_Forensic\\Homogeneous_Patches_CNN_v2\\UI\\routers\\__init__.py": {
+    "mtime": 1778261735.0501673,
+    "hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "D:\\Image_Forensic\\Homogeneous_Patches_CNN_v2\\UI\\static\\app.js": {
+    "mtime": 1778174952.8055778,
+    "hash": "6e1fcebe62af2c74e3d5f7c46f12cb62"
+  },
+  "D:\\Image_Forensic\\2022 ESWA Camera model identification based on forensic traces extracted from homogeneous patches.md": {
+    "mtime": 1778258301.2658153,
+    "hash": "2a7dc060f8813cb6095cee60a81371e9"
+  },
+  "D:\\Image_Forensic\\GEMINI.md": {
+    "mtime": 1778265737.8883295,
+    "hash": "747e73a5e1af4b72c0d65c9169c23199"
+  },
+  "D:\\Image_Forensic\\README.md": {
+    "mtime": 1778178483.902841,
+    "hash": "6c8267e12379b67b58c2aec2fa63bd4b"
+  },
+  "D:\\Image_Forensic\\Homogeneous_Patches_CNN_v2\\README.md": {
+    "mtime": 1778261691.471016,
+    "hash": "e38ca089a29e1b588add02d592d50658"
+  },
+  "D:\\Image_Forensic\\Homogeneous_Patches_CNN_v2\\requirements.txt": {
+    "mtime": 1778146139.8936763,
+    "hash": "e97dceefbe6f14191b5600c75e123992"
+  },
+  "D:\\Image_Forensic\\Homogeneous_Patches_CNN_v2\\UI\\static\\index.html": {
+    "mtime": 1778174702.060221,
+    "hash": "25325cab513d26a420149a3105661efc"
+  }
+}

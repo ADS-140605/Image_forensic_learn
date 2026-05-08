@@ -1,0 +1,27 @@
+D:\Image_Forensic\summarize_detect.py
+D:\Image_Forensic\Homogeneous_Patches_CNN_v2\pipeline.py
+D:\Image_Forensic\Homogeneous_Patches_CNN_v2\AI\config.py
+D:\Image_Forensic\Homogeneous_Patches_CNN_v2\AI\__init__.py
+D:\Image_Forensic\Homogeneous_Patches_CNN_v2\AI\dataset\dresden.py
+D:\Image_Forensic\Homogeneous_Patches_CNN_v2\AI\dataset\patch_extractor.py
+D:\Image_Forensic\Homogeneous_Patches_CNN_v2\AI\dataset\__init__.py
+D:\Image_Forensic\Homogeneous_Patches_CNN_v2\AI\inference\predictor.py
+D:\Image_Forensic\Homogeneous_Patches_CNN_v2\AI\inference\__init__.py
+D:\Image_Forensic\Homogeneous_Patches_CNN_v2\AI\models\convnet.py
+D:\Image_Forensic\Homogeneous_Patches_CNN_v2\AI\models\__init__.py
+D:\Image_Forensic\Homogeneous_Patches_CNN_v2\AI\training\distribution.py
+D:\Image_Forensic\Homogeneous_Patches_CNN_v2\AI\training\trainer.py
+D:\Image_Forensic\Homogeneous_Patches_CNN_v2\AI\training\__init__.py
+D:\Image_Forensic\Homogeneous_Patches_CNN_v2\AI\utils\integral_image.py
+D:\Image_Forensic\Homogeneous_Patches_CNN_v2\AI\utils\__init__.py
+D:\Image_Forensic\Homogeneous_Patches_CNN_v2\tests\test_architecture.py
+D:\Image_Forensic\Homogeneous_Patches_CNN_v2\UI\main.py
+D:\Image_Forensic\Homogeneous_Patches_CNN_v2\UI\__init__.py
+D:\Image_Forensic\Homogeneous_Patches_CNN_v2\UI\routers\__init__.py
+D:\Image_Forensic\Homogeneous_Patches_CNN_v2\UI\static\app.js
+D:\Image_Forensic\2022 ESWA Camera model identification based on forensic traces extracted from homogeneous patches.md
+D:\Image_Forensic\GEMINI.md
+D:\Image_Forensic\README.md
+D:\Image_Forensic\Homogeneous_Patches_CNN_v2\README.md
+D:\Image_Forensic\Homogeneous_Patches_CNN_v2\requirements.txt
+D:\Image_Forensic\Homogeneous_Patches_CNN_v2\UI\static\index.html

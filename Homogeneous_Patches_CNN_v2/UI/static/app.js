@@ -15,6 +15,11 @@ const clearBtn       = document.getElementById('clear-btn');
 const predictBtn     = document.getElementById('predict-btn');
 const resultsCard    = document.getElementById('results-card');
 const healthBadge    = document.getElementById('health-badge');
+const helpBtn        = document.getElementById('help-btn');
+const helpModal      = document.getElementById('help-modal');
+const helpCloseBtn   = document.getElementById('help-close');
+const overlay        = document.getElementById('global-overlay');
+const toastContainer = document.getElementById('toast-container');
 
 // Result fields
 const resBrand       = document.getElementById('res-brand');
@@ -67,6 +72,23 @@ async function checkHealth() {
   }
 }
 checkHealth();
+
+/* Help modal handlers */
+function toggleHelp(open) {
+  const show = typeof open === 'boolean' ? open : helpModal.classList.contains('hidden');
+  if (show) {
+    helpModal.classList.remove('hidden');
+    helpModal.querySelector('.help-inner').focus();
+  } else {
+    helpModal.classList.add('hidden');
+  }
+}
+helpBtn?.addEventListener('click', () => toggleHelp(true));
+helpCloseBtn?.addEventListener('click', () => toggleHelp(false));
+document.addEventListener('keydown', e => {
+  if ((e.key === 'h' || e.key === 'H') && document.activeElement.tagName !== 'INPUT') toggleHelp(true);
+  if (e.key === 'Escape') toggleHelp(false);
+});
 
 /* ═══════════════════════════════════════════════════════════════════════════ */
 /* Drag-and-drop & file selection                                              */
@@ -295,24 +317,22 @@ function updateStatusUI(state, message) {
 function setLoading(btn, loading) {
   btn.classList.toggle('loading', loading);
   btn.disabled = loading;
+  // Show global overlay when long-running primary actions run
+  if (btn === predictBtn || btn === trainBtn) {
+    overlay.classList.toggle('hidden', !loading);
+  }
 }
 
-function showToast(message, type = 'info') {
+function showToast(message, type = 'info', timeout = 4000) {
+  if (!toastContainer) {
+    // fallback to old behavior
+    const t = document.createElement('div'); t.textContent = message; document.body.appendChild(t);
+    setTimeout(() => t.remove(), timeout); return;
+  }
   const toast = document.createElement('div');
-  const colors = { error: '#ef4444', info: '#3b82f6', success: '#10b981' };
-  toast.style.cssText = `
-    position:fixed; bottom:24px; right:24px; z-index:9999;
-    background:${colors[type] || colors.info}18;
-    border:1px solid ${colors[type] || colors.info}55;
-    color:${colors[type] || colors.info};
-    padding:12px 20px; border-radius:10px;
-    font-size:0.875rem; font-weight:500;
-    backdrop-filter:blur(12px);
-    box-shadow:0 4px 24px rgba(0,0,0,0.4);
-    animation:fadeIn 0.2s ease;
-    max-width:320px; word-wrap:break-word;
-  `;
+  toast.className = 'toast';
+  toast.setAttribute('role', 'status');
   toast.textContent = message;
-  document.body.appendChild(toast);
-  setTimeout(() => toast.remove(), 4000);
+  toastContainer.appendChild(toast);
+  setTimeout(() => toast.remove(), timeout);
 }

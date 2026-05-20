@@ -13,9 +13,10 @@ The implementation is fully GPU‑accelerated (tested on an RTX 3050) and incl
 
 ## 📂 Directory Structure
 ```
+
 Image_Forensic/
 ├─ .gitignore                # ignored files (env, caches, etc.)
-├─ requirements.txt          # Python deps
+├─ requirements.txt       
 ├─ Homogeneous Patches + CNN/
 │   ├─ AI/                  # Core model, dataset, utils, training
 │   │   ├─ config.py        # Hyper‑parameters

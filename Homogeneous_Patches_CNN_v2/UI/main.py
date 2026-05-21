@@ -26,6 +26,7 @@ app.mount("/static", StaticFiles(directory=str(UI_DIR / "static")), name="static
 # Load label maps and predictor if available
 PREDICTOR = None
 try:
+    # Load mapping files and initialize the predictor if checkpoints exist.
     with open(CHECKPOINT_DIR / "label_maps.json", "r") as f:
         maps = json.load(f)
     PREDICTOR = CameraPredictor(
@@ -35,6 +36,7 @@ try:
         model_to_idx=maps["model"]
     )
 except Exception as e:
+    # Predictor is optional for development; frontend shows 'Server offline' if not present.
     print(f"Predictor not loaded: {e}")
 
 @app.get("/")
@@ -44,17 +46,32 @@ async def read_index():
 
 @app.post("/predict")
 async def predict_image(file: UploadFile = File(...)):
+    """
+    Accepts an uploaded image and returns a JSON object with hierarchical
+    prediction details. The response mirrors the frontend expectations and
+    includes vote distributions and confidence scores when available.
+    """
     temp_path = Path(f"temp_{file.filename}")
     with open(temp_path, "wb") as buffer:
         shutil.copyfileobj(file.file, buffer)
-    
-    if PREDICTOR:
-        brand, model = PREDICTOR.predict(temp_path)
-    else:
-        brand, model = "System not trained", "System not trained"
-    
-    os.remove(temp_path)
-    return {"brand": brand, "model": model}
+
+    try:
+        if PREDICTOR:
+            # Predictor.predict now returns a dict with detailed fields.
+            result = PREDICTOR.predict(temp_path)
+        else:
+            result = {
+                'brand': 'System not trained', 'model': 'System not trained',
+                'brand_confidence': 0.0, 'model_confidence': 0.0,
+                'num_patches': 0, 'brand_votes': {}, 'model_votes': {}
+            }
+    finally:
+        try:
+            os.remove(temp_path)
+        except Exception:
+            pass
+
+    return result
 
 if __name__ == "__main__":
     import uvicorn

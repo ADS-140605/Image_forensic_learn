@@ -73,6 +73,14 @@ async function checkHealth() {
 }
 checkHealth();
 
+// Extra keyboard shortcut: press 'A' or 'a' to trigger analysis when a file is selected.
+document.addEventListener('keydown', e => {
+  if ((e.key === 'a' || e.key === 'A') && !predictBtn.disabled && document.activeElement.tagName !== 'INPUT') {
+    e.preventDefault();
+    runPrediction();
+  }
+});
+
 /* Help modal handlers */
 function toggleHelp(open) {
   const show = typeof open === 'boolean' ? open : helpModal.classList.contains('hidden');
@@ -121,6 +129,7 @@ function setFile(file) {
     showToast('Please select an image file.', 'error');
     return;
   }
+  // Store file and update preview — keep behaviour simple and accessible.
   selectedFile = file;
   const url = URL.createObjectURL(file);
   previewImg.src = url;

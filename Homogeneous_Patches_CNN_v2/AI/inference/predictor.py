@@ -44,37 +44,77 @@ class CameraPredictor:
         self.extractor = PatchExtractor(target_p=200)
 
     def predict(self, image_path):
+        """
+        Performs hierarchical inference on `image_path` and returns a rich
+        result dictionary containing brand/model names, confidence scores,
+        vote distributions and the number of patches analysed.
+
+        Returned keys:
+          - brand: predicted brand name (str)
+          - model: predicted model name (str)
+          - brand_confidence: fraction of patches that voted for the brand (0..1)
+          - model_confidence: fraction of patches that voted for the model (0..1)
+          - num_patches: number of patches analysed (int)
+          - brand_votes: dict mapping brand -> vote count
+          - model_votes: dict mapping model -> vote count
+        """
         img = cv2.imread(str(image_path))
         img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-        patches = self.extractor.extract(img) # (N, 3, 128, 128)
-        
-        if len(patches) == 0:
-            return "Unknown", "Unknown"
-            
+        patches = self.extractor.extract(img)  # (N, 3, 128, 128)
+
+        num_patches = len(patches)
+        if num_patches == 0:
+            return {
+                'brand': 'Unknown', 'model': 'Unknown',
+                'brand_confidence': 0.0, 'model_confidence': 0.0,
+                'num_patches': 0, 'brand_votes': {}, 'model_votes': {}
+            }
+
         patches_t = torch.from_numpy(patches).to(self.device)
-        
-        # 1. Brand Majority Vote
+
+        # 1. Brand logits -> per-patch brand predictions
         with torch.no_grad():
             brand_logits = self.brand_model(patches_t)
             brand_preds = brand_logits.argmax(1).cpu().numpy()
-            
+
         unique_brands, counts = np.unique(brand_preds, return_counts=True)
-        pred_brand_idx = unique_brands[np.argmax(counts)]
-        pred_brand = self.idx_to_brand[pred_brand_idx]
-        
-        # 2. Model Majority Vote
+        # Map predicted indices to names and build vote dict
+        brand_votes = {self.idx_to_brand[int(idx)]: int(cnt) for idx, cnt in zip(unique_brands, counts)}
+        # Choose brand with most votes
+        top_brand_idx = unique_brands[np.argmax(counts)]
+        pred_brand = self.idx_to_brand[int(top_brand_idx)]
+        brand_confidence = float(np.max(counts) / num_patches)
+
+        # 2. If we have a model classifier for the predicted brand, run it
+        model_votes = {}
+        model_confidence = 0.0
+        pred_model = None
+
         if pred_brand in self.model_classifiers:
             m_model, local_map = self.model_classifiers[pred_brand]
             with torch.no_grad():
                 model_logits = m_model(patches_t)
                 model_preds = model_logits.argmax(1).cpu().numpy()
-            
+
             unique_models, m_counts = np.unique(model_preds, return_counts=True)
-            pred_model_local_idx = unique_models[np.argmax(m_counts)]
-            pred_model = local_map[pred_model_local_idx]
+            # local_map maps local idx -> global model name
+            model_votes = {local_map[int(idx)]: int(cnt) for idx, cnt in zip(unique_models, m_counts)}
+            top_model_local_idx = unique_models[np.argmax(m_counts)]
+            pred_model = local_map[int(top_model_local_idx)]
+            model_confidence = float(np.max(m_counts) / num_patches)
         else:
-            # Trivial case: brand only has one model
-            # Find the model name for this brand
-            pred_model = next((m for m in self.model_to_idx if m.startswith(pred_brand)), pred_brand)
-            
-        return pred_brand, pred_model
+            # Brand-level classifier only; try to pick the canonical model name
+            candidate = next((m for m in self.model_to_idx if m.startswith(pred_brand)), None)
+            pred_model = candidate or pred_brand
+            model_votes = {pred_model: num_patches}
+            model_confidence = 1.0 if num_patches > 0 else 0.0
+
+        return {
+            'brand': pred_brand,
+            'model': pred_model,
+            'brand_confidence': brand_confidence,
+            'model_confidence': model_confidence,
+            'num_patches': num_patches,
+            'brand_votes': brand_votes,
+            'model_votes': model_votes,
+        }

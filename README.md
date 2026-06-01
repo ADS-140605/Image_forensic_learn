@@ -1,13 +1,21 @@
 # Camera Model Identification via Hierarchical CNN on Homogeneous Patches
 
 ## 🎯 Project Overview
-This repository implements a **hierarchical classification system** for source‑camera model identification using forensic traces extracted from homogeneous image patches. The pipeline:
-1. **Patch extraction** – overlapping 128×128 windows (stride = 32) with homogeneity filtering based on per‑channel standard deviation.
-2. **Convolutional neural network** – a 7‑block architecture (see `AI/models/convnet.py`).
-3. **Hierarchical training** – brand‑level classifier → model‑level classifiers for each brand.
-4. **Inference** – majority‑vote over 200 patches per image for brand, then model.
+This repository implements a **hierarchical classification system** for source‑camera model identification using forensic traces extracted from homogeneous image patches.
 
-The implementation is fully GPU‑accelerated (tested on an RTX 3050) and includes utilities for fast integral‑image computation, data loading, training loops, and a minimal FastAPI UI.
+## 🏗️ Architecture
+The system is organized into four main components:
+
+- **Patch extraction**: sliding 128×128 windows (stride = 32) with a homogeneity filter (per‑channel std deviation) that selects informative patches.
+- **Feature extractor (CNN)**: a compact 7‑block convolutional backbone that maps patches to discriminative embeddings (see `Homogeneous_Patches_CNN_v2/AI/models/convnet.py`).
+- **Hierarchical classifiers**: a Level‑1 brand classifier followed by Level‑2 per‑brand model classifiers. Training is staged (brand → models) to improve scalability.
+- **Inference & aggregation**: extract N patches per image (default 200), run the hierarchical predictors, and aggregate predictions via majority vote.
+
+Data and control flow:
+
+Patch extraction -> Feature extractor -> Level‑1 (brand) classifier -> Level‑2 (model) classifier -> Aggregation
+
+The codebase is GPU‑accelerated and includes utilities for fast integral‑image computation, dataset loading, training loops, checkpoints, and a small FastAPI UI for quick inference.
 
 ---
 
@@ -17,7 +25,7 @@ The implementation is fully GPU‑accelerated (tested on an RTX 3050) and incl
 Image_Forensic/
 ├─ .gitignore                # ignored files (env, caches, etc.)
 ├─ requirements.txt       
-├─ Homogeneous Patches + CNN/
+├─ Homogeneous_Patches_CNN_v2/
 │   ├─ AI/                  # Core model, dataset, utils, training
 │   │   ├─ config.py        # Hyper‑parameters
 │   │   ├─ models/convnet.py
